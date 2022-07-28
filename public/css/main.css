@@ -1,0 +1,291 @@
+body {
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.5385;
+  color: #333;
+  text-align: left;
+  background-color: #eee;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .1875rem;
+}
+
+.card-img-actions {
+  position: relative;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.card-title {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.invoice-color {
+  text-align: right;
+  color: red !important;
+}
+
+.invoice-color-blue {
+  text-align: left;
+}
+
+.text-sm-right {
+  text-align: left;
+  float: right;
+}
+
+.col-sm-times {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row-times:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rounded-background {
+  border-radius: 50px;
+  background: #cfe9f8;
+  padding: 6px;
+  font-weight: 700;
+}
+
+.card-header {
+  padding: .9375rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn-light {
+  color: #333;
+  background-color: #fafafa;
+  border-color: #ddd;
+}
+
+.header-elements-inline {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 768px) {
+  .wmin-md-400 {
+    min-width: 400px !important;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2196f3;
+}
+
+.btn-labeled > b {
+  position: absolute;
+  top: -1px;
+  background-color: blue;
+  display: block;
+  line-height: 1;
+  padding: .62503rem;
+}
+
+.text-muted {
+  float: center;
+}
+
+.details-Table {
+  width: 100%;
+  border: 1px solid #b3adad;
+  border-collapse: collapse;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.head-first-col {
+  width: 70%;
+  text-align: left;
+}
+
+.head-col {
+  text-align: center;
+}
+
+.details-Table th {
+  border: 1px solid #b3adad;
+  padding: 10px;
+  background: #f0f0f0;
+  color: #313030;
+}
+
+.haberes-value,
+.descuentos-value {
+  border: 1px solid #b3adad;
+  padding: 5px;
+  background: #ffffff;
+  color: #313030;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.head-item {
+  border: 1px solid #b3adad;
+  padding: 5px;
+  background: #ffffff;
+  color: #313030;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.sub-item {
+  border: 1px solid #b3adad;
+  background: #ffffff;
+  color: #313030;
+  vertical-align: middle;
+  text-align: start;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 20px;
+}
+
+.sub-item-prev {
+  border: 1px solid #b3adad;
+  background: #ffffff;
+  color: #313030;
+  vertical-align: middle;
+  text-align: start;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 40px;
+}
+
+.total-foot-table {
+  border: 1px solid #b3adad;
+  padding: 5px;
+  background: #ffffff;
+  color: #313030;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.alcance-liquido {
+  float: right;
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.alcance-liquido:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.alcance-liquido th,
+.alcance-liquido td {
+  width: 50%;
+}
+
+.alcance-liquido td {
+  text-align: right;
+  border-color: #ddd;
+}
+
+.alcance-liquido th {
+  background: #eee;
+  border-color: #bbb;
+}
+
+.declaracion-firma {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+}
+
+p {
+  text-align: justify;
+}
+
+/* content editable */
+*[contenteditable] {
+  border-radius: 0.25em;
+  min-width: 1em;
+  outline: 0;
+}
+
+*[contenteditable] {
+  cursor: pointer;
+}
+
+*[contenteditable]:hover,
+*[contenteditable]:focus,
+td:hover *[contenteditable],
+td:focus *[contenteditable],
+img.hover {
+  background: #DEF;
+  -webkit-box-shadow: 0 0 1em 0.5em #DEF;
+          box-shadow: 0 0 1em 0.5em #DEF;
+}
+
+span[contenteditable] {
+  display: inline-block;
+}
+
+#currency-field {
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #333;
+  font-size: 32px;
+  margin: 0 0 20px;
+  padding: .5rem 1rem;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

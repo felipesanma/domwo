@@ -1,0 +1,25 @@
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 900px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.defaultClass {
+    float: left;
+    margin: 10px 15px 10px 10px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.content {
+    flex: 1;
+    flex-shrink: 0;
+    padding: 10px;
+    vertical-align: center;
+}

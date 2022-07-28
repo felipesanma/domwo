@@ -1,0 +1,186 @@
+<div class="container d-flex justify-content-center mt-50 mb-50">
+    <div class="row">
+        <div class="inputs-values">
+            <label for="currency-field">Sueldo líquido</label>
+            <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(.\d{3})?$" value=""
+                data-type="currency" placeholder="$300.000" onkeyup="modify_cells()">
+            <label for="afp">AFP o IPS:</label>
+            <select name="afp" id="afp" onchange="modify_cells()">
+                <option value="Capital">AFP Capital</option>
+                <option value="Cuprum">AFP Cuprum</option>
+                <option value="Habitat">AFP Habitat</option>
+                <option value="PlanVital">AFP PlanVital</option>
+                <option value="ProVida">AFP ProVida</option>
+                <option value="Modelo">AFP Modelo</option>
+                <option value="Uno">AFP Uno</option>
+                <option value="IPS">IPS</option>
+            </select>
+        </div>
+        <div class="col-md-12 text-right mb-3">
+            <button class="btn btn-primary" id="download" onclick="downloadToPDF()"> Descargar en pdf</button>
+        </div>
+        <div class="col-md-12">
+            <div class="card" id="invoice">
+                <div class="card-header bg-transparent header-elements-inline">
+                    <h6 class="card-title text-primary">Liquidación de Sueldo</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-4 pull-left" contenteditable>
+                                <h4 class="invoice-color-blue mb-2 mt-md-2">Información trabajador</h4>
+                                <ul class="list list-unstyled mb-0 text-left">
+                                    <li>Nombre:</li>
+                                    <li>Rut:</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-4 ">
+                                <div class="d-flex flex-wrap wmin-md-400">
+                                    <ul class="list list-unstyled mb-0 text-left" contenteditable>
+                                        <li>
+                                            <h4 class="invoice-color-blue mb-2 mt-md-2">Información empleador</h4>
+                                        </li>
+                                        <li>Nombre:</li>
+                                        <li>Rut:</li>
+                                        <li>Dirección:</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-times">
+                        <div class="col-sm-times rounded-background">Período de remuneración</div>
+                        <div class="col-sm-times rounded-background">Días trabajados</div>
+                        <div class="col-sm-times rounded-background">Días licencia</div>
+                        <div class="col-sm-times rounded-background">Días ausencia</div>
+                    </div>
+                    <div class="row-times">
+                        <div class="col-sm-times" id="picker" contenteditable>Mayo del 2022</div>
+                        <div class="col-sm-times" id="dias_trabajados" contenteditable oninput="modify_cells()">30</div>
+                        <div class="col-sm-times" contenteditable>0</div>
+                        <div class="col-sm-times" contenteditable>0</div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="details-Table" id="detalles-remuneracion">
+                            <thead>
+                                <tr>
+                                    <th class="head-first-col">Detalle de la remuneración</th>
+                                    <th class="head-col">Haberes</th>
+                                    <th class="head-col">Descuentos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="head-row">
+                                    <td class="head-item">Haberes</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item">Sueldo base</td>
+                                    <td class="haberes-value" id="sueldo_base">0</td>
+                                    <td class="descuentos-value"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item">Otros ingresos imponibles</td>
+                                    <td class="haberes-value" id="otros_ingresos" contenteditable>0</td>
+                                    <td class="descuentos-value"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item">Asignación familiar - N° de cargas: <span
+                                            contenteditable>0</span></td>
+                                    <td class="haberes-value">0</td>
+                                    <td class="descuentos-value"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item">Movilización</td>
+                                    <td class="haberes-value" id="movilizacion" contenteditable>0</td>
+                                    <td class="descuentos-value"></td>
+                                </tr>
+                                <tr>
+                                    <td class="head-item">Descuentos legales</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item">Cotización previsional</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item-prev" id="cot_prev_name">AFP / IPS</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value" id="afp_value">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item-prev">Seguro de Invalidez y Sobrevivencia (SIS: 1,86%)</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value" id="sis_value">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item-prev">Seguro de Cesantía (AFC: 3,0%)</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value" id="afc_value">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item-prev">Aporte indemnización obligatoria (1,11%)
+                                    </td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value" id="cta_ahorro_value">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item">Cotización salud (Fonasa o Isapre: 7,0%)</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value" id="salud_value">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item">Seguro de accidentes del trabajo (0,93%)</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value" id="seg_acc_value">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="head-item">Otros descuentos</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-item">Anticípos o prestamos</td>
+                                    <td class="haberes-value"></td>
+                                    <td class="descuentos-value" id="otros_dctos" contenteditable>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="total-foot-table">Totales</td>
+                                    <td class="haberes-value haberes-sum" id="total_haberes">0</td>
+                                    <td class="descuentos-value descuentos-sum" id="total_dctos">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="alcance-liquido">
+                            <tr>
+                                <th>Saldo líquido a pagar</th>
+                                <td id="sueldo_liquido_real"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="declaracion-firma">
+                        <div class="declaracion-left"></div>
+                        <div class="declaracion-center" contenteditable>
+                            <p>
+                                Certifico que he recibido
+                                a mi total y entera satisfacción el saldo líquido indicado en la presente
+                                liquidación,
+                                sin tener cargo ni cobro posterior alguno que hacer, por los conceptos de esta
+                                liquidación.
+                            </p>
+                        </div>
+                        <div class="declaracion-right"></div>
+                    </div>
+                    <div class="card-footer"> <span class="text-muted">Liquidación hecha en
+                            <a href="http://www.domwo.click/">domwo.click</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

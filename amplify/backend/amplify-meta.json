@@ -1,0 +1,58 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-domwologin-dev-231538-authRole",
+      "UnauthRoleArn": "arn:aws:iam::978208358748:role/amplify-domwologin-dev-231538-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::978208358748:role/amplify-domwologin-dev-231538-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-domwologin-dev-231538-deployment",
+      "UnauthRoleName": "amplify-domwologin-dev-231538-unauthRole",
+      "StackName": "amplify-domwologin-dev-231538",
+      "StackId": "arn:aws:cloudformation:us-east-1:978208358748:stack/amplify-domwologin-dev-231538/8f5f11d0-0e23-11ed-882b-0a4aadf3878b",
+      "AmplifyAppId": "d32svzb7ydr15j"
+    }
+  },
+  "auth": {
+    "domwologin30d25dd3": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-domwologin-dev-231538-deployment/amplify-cfn-templates/auth/domwologin30d25dd3-cloudformation-template.json",
+        "logicalId": "authdomwologin30d25dd3"
+      },
+      "lastPushTimeStamp": "2022-07-28T03:20:52.195Z",
+      "output": {
+        "UserPoolId": "us-east-1_QmCYnAvMj",
+        "AppClientIDWeb": "721fb82fult1s4k3r3hj2mr5g",
+        "AppClientID": "5g0fh5qfb59t18atl1s729jt16",
+        "IdentityPoolId": "us-east-1:53064887-817a-4ef6-9cd7-477aa1d371ad",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:978208358748:userpool/us-east-1_QmCYnAvMj",
+        "IdentityPoolName": "domwologin30d25dd3_identitypool_30d25dd3__dev",
+        "UserPoolName": "domwologin30d25dd3_userpool_30d25dd3"
+      },
+      "lastPushDirHash": "yh3A2XtpidDgKyGrtmNYni2j0MA="
+    }
+  }
+}

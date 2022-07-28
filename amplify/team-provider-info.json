@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-domwologin-dev-231538-authRole",
+      "UnauthRoleArn": "arn:aws:iam::978208358748:role/amplify-domwologin-dev-231538-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::978208358748:role/amplify-domwologin-dev-231538-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-domwologin-dev-231538-deployment",
+      "UnauthRoleName": "amplify-domwologin-dev-231538-unauthRole",
+      "StackName": "amplify-domwologin-dev-231538",
+      "StackId": "arn:aws:cloudformation:us-east-1:978208358748:stack/amplify-domwologin-dev-231538/8f5f11d0-0e23-11ed-882b-0a4aadf3878b",
+      "AmplifyAppId": "d32svzb7ydr15j"
+    },
+    "categories": {
+      "auth": {
+        "domwologin30d25dd3": {}
+      }
+    }
+  }
+}
