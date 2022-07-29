@@ -155,7 +155,7 @@
     "authdomwologin30d25dd3": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-domwologin-dev-231538-deployment/amplify-cfn-templates/auth/domwologin30d25dd3-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-domwologin-localdev-113617-deployment/amplify-cfn-templates/auth/domwologin30d25dd3-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "domwologin30d25dd3_identitypool_30d25dd3",
           "allowUnauthenticatedIdentities": false,
@@ -202,7 +202,7 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "env": "dev"
+          "env": "localdev"
         }
       }
     },

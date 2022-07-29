@@ -3,5 +3,10 @@
     "configLevel": "project",
     "useProfile": true,
     "profileName": "default"
+  },
+  "localdev": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/clm/.amplify/awscloudformation/snDKW4pxeA"
   }
 }

@@ -16,5 +16,23 @@
         "domwologin30d25dd3": {}
       }
     }
+  },
+  "localdev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-domwologin-localdev-113617-authRole",
+      "UnauthRoleArn": "arn:aws:iam::978208358748:role/amplify-domwologin-localdev-113617-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::978208358748:role/amplify-domwologin-localdev-113617-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-domwologin-localdev-113617-deployment",
+      "UnauthRoleName": "amplify-domwologin-localdev-113617-unauthRole",
+      "StackName": "amplify-domwologin-localdev-113617",
+      "StackId": "arn:aws:cloudformation:us-east-1:978208358748:stack/amplify-domwologin-localdev-113617/31d07d10-0f54-11ed-a82c-12cb4ac6e20b",
+      "AmplifyAppId": "deeudls8uibo1"
+    },
+    "categories": {
+      "auth": {
+        "domwologin30d25dd3": {}
+      }
+    }
   }
 }
